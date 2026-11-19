@@ -5,14 +5,14 @@ on:
   pull_request:
     branches: [main]
 jobs:
-  web:
+  clients:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v4
         with: { version: 10 }
       - uses: actions/setup-node@v4
-        with: { node-version: 22, cache: pnpm }
+        with: { node-version: 22.13.0, cache: pnpm }
       - run: pnpm install --no-frozen-lockfile
-      - run: pnpm --filter @linqor/web typecheck
-      - run: pnpm --filter @linqor/web build
+      - run: pnpm typecheck
+      - run: pnpm build
