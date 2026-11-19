@@ -1,0 +1,4 @@
+import { Link } from "react-router-dom";
+export function LoginPage() {
+  return <section className="panel narrow"><p className="eyebrow">ACCOUNT</p><h1>Вход в Linqor</h1><p className="muted">Форма будет подключена к Supabase Auth на следующем этапе.</p><label>Email<input type="email" autoComplete="email" placeholder="name@example.com" disabled /></label><label>Пароль<input type="password" autoComplete="current-password" disabled /></label><button className="button button-primary" disabled>Войти</button><p className="muted">Нет аккаунта? <Link to="/register">Зарегистрироваться</Link></p></section>;
+}
