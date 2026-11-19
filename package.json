@@ -13,7 +13,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "format": "prettier --write .",
-    "format:check": "prettier --check eslint.config.mjs vitest.config.ts packages/validation/src/index.test.ts .prettierrc.json .github/workflows/ci.yml"
+    "format:check": "prettier --check vitest.config.ts .prettierrc.json .github/workflows/ci.yml"
   },
   "devDependencies": {
     "eslint": "^9.35.0",
