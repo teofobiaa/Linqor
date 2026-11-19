@@ -31,3 +31,18 @@ Thumbs.db
 # Local tooling
 .wrangler/
 .supabase/
+
+# Linqor client workspace
+node_modules
+.pnpm-store
+.turbo
+dist
+build
+coverage
+.expo
+web-build
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
