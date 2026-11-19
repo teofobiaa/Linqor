@@ -1,0 +1,16 @@
+{
+  "name": "linqor",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "pnpm@10.0.0",
+  "engines": { "node": ">=22.13.0", "pnpm": ">=10.0.0" },
+  "scripts": {
+    "dev:web": "pnpm --filter @linqor/web dev",
+    "dev:android": "pnpm --filter @linqor/android start",
+    "build": "turbo run build",
+    "typecheck": "turbo run typecheck",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": { "prettier": "^3.6.2", "turbo": "^2.5.6", "typescript": "~6.0.3" }
+}

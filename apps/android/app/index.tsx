@@ -1,0 +1,6 @@
+import { Link } from "expo-router";
+import { StyleSheet, Text, View } from "react-native";
+export default function HomeScreen() {
+  return <View style={styles.container}><Text style={styles.eyebrow}>DEVICE BRIDGE</Text><Text style={styles.title}>Linqor</Text><Text style={styles.description}>Подключайте устройства и передавайте данные в рамках отдельной сессии.</Text><Link href="/pair" style={styles.link}>Подключить устройство</Link><Link href="/auth" style={styles.secondary}>Войти или зарегистрироваться</Link><Link href="/favorites" style={styles.secondary}>Избранные беседы</Link><Text style={styles.note}>Начальный каркас. Сетевые функции ещё не подключены.</Text></View>;
+}
+const styles = StyleSheet.create({ container: { flex: 1, justifyContent: "center", padding: 28, backgroundColor: "#101827" }, eyebrow: { color: "#65c6e8", letterSpacing: 3, fontSize: 11, fontWeight: "800" }, title: { color: "#ffffff", fontSize: 48, fontWeight: "800", marginTop: 12 }, description: { color: "#aab8c8", fontSize: 17, lineHeight: 26, marginVertical: 20 }, link: { color: "#10202b", backgroundColor: "#8bd7f0", padding: 14, borderRadius: 10, overflow: "hidden", textAlign: "center", fontWeight: "700" }, secondary: { color: "#9ed4ff", padding: 16, textAlign: "center" }, note: { color: "#8293a6", fontSize: 12, marginTop: 24 } });

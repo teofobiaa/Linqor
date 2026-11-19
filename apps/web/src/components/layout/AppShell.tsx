@@ -1,0 +1,4 @@
+import { NavLink, Outlet } from "react-router-dom";
+export function AppShell() {
+  return <div className="app-shell"><header className="topbar"><NavLink className="brand" to="/">Linqor</NavLink><nav aria-label="Основная навигация"><NavLink to="/">Обзор</NavLink><NavLink to="/pair">Подключить устройство</NavLink><NavLink to="/favorites">Избранное</NavLink><NavLink to="/settings">Настройки</NavLink></nav><div className="account-links"><NavLink to="/login">Войти</NavLink><NavLink to="/register">Регистрация</NavLink></div></header><main className="page-container"><Outlet /></main><footer className="footer">Linqor · Клиентское приложение</footer></div>;
+}

@@ -1,0 +1,4 @@
+import { Link } from "react-router-dom";
+export function RegisterPage() {
+  return <section className="panel narrow"><p className="eyebrow">ACCOUNT</p><h1>Создать аккаунт</h1><p className="muted">Регистрация будет подключена к Supabase Auth. Поля пока неактивны.</p><label>Email<input type="email" autoComplete="email" disabled /></label><label>Пароль<input type="password" autoComplete="new-password" disabled /></label><label>Повторите пароль<input type="password" autoComplete="new-password" disabled /></label><button className="button button-primary" disabled>Создать аккаунт</button><p className="muted">Уже есть аккаунт? <Link to="/login">Войти</Link></p></section>;
+}
