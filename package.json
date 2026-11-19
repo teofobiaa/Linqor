@@ -9,8 +9,19 @@
     "dev:android": "pnpm --filter @linqor/android start",
     "build": "turbo run build",
     "typecheck": "turbo run typecheck",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check vitest.config.ts .prettierrc.json .github/workflows/ci.yml"
   },
-  "devDependencies": { "prettier": "^3.6.2", "turbo": "^2.5.6", "typescript": "~6.0.3" }
+  "devDependencies": {
+    "eslint": "^9.35.0",
+    "globals": "^16.4.0",
+    "prettier": "^3.6.2",
+    "turbo": "^2.5.6",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "^8.42.0",
+    "vitest": "^3.2.4"
+  }
 }
