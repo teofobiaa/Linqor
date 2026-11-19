@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+vendor/
+
+# Build output
+dist/
+build/
+.next/
+out/
+coverage/
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Logs and temporary files
+*.log
+tmp/
+temp/
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local tooling
+.wrangler/
+.supabase/
