@@ -9,7 +9,7 @@
 | Платформа | Реализация | Назначение |
 | --- | --- | --- |
 | Web | React + TypeScript + Vite | Браузер на Windows 10/11 |
-| Android | React Native + Expo + TypeScript | Мобильное приложение |
+| Android | React Native 0.88 + Expo SDK 58 + TypeScript | Мобильное приложение |
 
 iOS и нативный клиент Windows в текущий объём не входят.
 
@@ -52,7 +52,7 @@ Linqor/
 
 ## Локальный запуск
 
-Требования: Node.js 22+, pnpm 10+.
+Требования: Node.js 22.13+, pnpm 10+.
 
 ```bash
 pnpm install
