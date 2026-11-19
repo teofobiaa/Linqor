@@ -1,0 +1,3 @@
+export function PairingPage() {
+  return <section className="panel"><p className="eyebrow">DEVICE PAIRING</p><h1>Подключение устройства</h1><p className="muted">Здесь появятся создание одноразового запроса, QR-код, сканирование и подтверждение подключения.</p><div className="qr-placeholder" aria-label="Место для QR-кода">QR</div><p className="notice">QR-код не генерируется: серверный протокол подключения ещё не реализован.</p></section>;
+}
