@@ -42,7 +42,9 @@ describe("pairingRequestSchema", () => {
   });
 
   it("rejects a token shorter than 32 characters", () => {
-    expect(pairingRequestSchema.safeParse({ ...validRequest, token: "too-short" }).success).toBe(false);
+    expect(
+      pairingRequestSchema.safeParse({ ...validRequest, token: "too-short" }).success,
+    ).toBe(false);
   });
 });
 
@@ -59,10 +61,14 @@ describe("transferMetadataSchema", () => {
   });
 
   it("rejects a non-positive file size", () => {
-    expect(transferMetadataSchema.safeParse({ ...validMetadata, sizeBytes: 0 }).success).toBe(false);
+    expect(
+      transferMetadataSchema.safeParse({ ...validMetadata, sizeBytes: 0 }).success,
+    ).toBe(false);
   });
 
   it("rejects an invalid SHA-256 checksum", () => {
-    expect(transferMetadataSchema.safeParse({ ...validMetadata, checksumSha256: "invalid" }).success).toBe(false);
+    expect(
+      transferMetadataSchema.safeParse({ ...validMetadata, checksumSha256: "invalid" }).success,
+    ).toBe(false);
   });
 });
