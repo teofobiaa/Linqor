@@ -1,23 +1,2 @@
-import { NavLink, Outlet } from "react-router-dom";
-
-export function AppShell() {
-  return (
-    <div className="app-shell">
-      <header className="topbar">
-        <NavLink className="brand" to="/">Linqor</NavLink>
-        <nav aria-label="Основная навигация">
-          <NavLink to="/" end>Обзор</NavLink>
-          <NavLink to="/pair">Подключить устройство</NavLink>
-          <NavLink to="/favorites">Избранное</NavLink>
-          <NavLink to="/settings">Настройки</NavLink>
-        </nav>
-        <div className="account-links">
-          <NavLink to="/login">Войти</NavLink>
-          <NavLink to="/register">Регистрация</NavLink>
-        </div>
-      </header>
-      <main className="page-container"><Outlet /></main>
-      <footer className="footer">Linqor · Клиентское приложение</footer>
-    </div>
-  );
-}
+import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
+export function AppShell(){const location=useLocation();const auth=location.pathname==="/login"||location.pathname==="/register";if(auth)return <div className="app-shell auth-shell"><Outlet/></div>;return <div className="app-shell"><header className="topbar"><Link className="brand" to="/">Linqor<span className="brand-mark">.</span></Link><nav aria-label="Основная навигация"><NavLink to="/" end>Главная</NavLink><NavLink to="/pair">Подключение</NavLink><NavLink to="/favorites">Избранное</NavLink></nav><div className="account-links"><NavLink className="profile-link" to="/settings"><span className="mini-avatar">L</span> Профиль</NavLink><Link className="button button-small button-outline" to="/login">Войти</Link></div></header><main className="page-container"><Outlet/></main><footer className="footer"><span className="brand footer-brand">Linqor<span className="brand-mark">.</span></span><span>Контролируемый обмен данными между устройствами</span><span>© 2026 Linqor</span></footer></div>;}
